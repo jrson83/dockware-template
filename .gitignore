@@ -1,0 +1,41 @@
+**/vendor/
+**/bin/*
+**/node_modules/
+
+###> shopware/core ###
+**/.env
+**/.env.local
+**/.env.local.php
+**/.env.*.local
+**/public/bundles/*
+**/public/media/*
+**/public/theme/*
+**/public/thumbnail/*
+**/public/sitemap/*
+**/files/*
+!**/files/.htaccess
+**/var/*
+!**/var/.htaccess
+**/auth.json
+**/install.lock
+**/public/asset-manifest.json
+###< shopware/core ###
+
+###> shopware/custom ###
+**/config/jwt/*
+!**/config/jwt/.gitkeep
+**/config/packages/local.yaml
+**/config/packages/local.yml
+###< shopware/custom ###
+
+###> friendsofphp/php-cs-fixer ###
+**/.php-cs-fixer.cache
+###< friendsofphp/php-cs-fixer ###
+
+
+###> dockware/custom ###
+.docker/mysql/*
+!.docker/mysql/.gitkeep
+**/.htpasswd
+src/*
+###< dockware/custom ###
