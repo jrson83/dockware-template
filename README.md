@@ -4,7 +4,7 @@
 
 ## Development Links
 
-<i>Based on dockware [default credentials](https://docs.dockware.io/use-dockware/default-credentials)</i>:
+*Based on dockware [default credentials](https://docs.dockware.io/use-dockware/default-credentials):*
 
 - [localhost](http://localhost/) - Storefront
 - [localhost/admin](http://localhost/admin) - Backend
@@ -17,26 +17,36 @@
 ### Setup
 
 ```sh
+# execute all initial tasks
+make init
+```
+
+executes the following tasks:
+
+```sh
 # raise the initial docker containers
-make init-start
+make init_start
 
 # copy the shopware source
-make init-setup
+make init_setup
 
 # destroy the initial containers
-make init-destroy
+make init_destroy
 
 # fix permissions
-make init-chown
+make init_chown
 
 # raise the actual docker containers
-make start
+make dev_start
 
-# fix permissions for sure
-make chown
+# fix permissions
+make dev_chown
 
 # fix default language & adminer, install php-cs-fixer
-make config
+make dev_config
+
+# fix permissions for sure
+make dev_chown
 ```
 
 ### Development
@@ -46,19 +56,13 @@ make config
 make dump
 
 # build a theme & clear cache
-make build-theme
+make build_theme
 
 # build the admin
-make build-admin
-
-# watch the admin
-make watch-admin
+make build_admin
 
 # build the storefront
-make build-storefront
-
-# watch the storefront
-make watch-storefront
+make build_storefront
 ```
 
 #### Speed up compilation

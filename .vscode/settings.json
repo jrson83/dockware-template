@@ -1,17 +1,54 @@
 {
-  "editor.formatOnSave": true,
-  "files.insertFinalNewline": true,
-  "intelephense.environment.documentRoot": "${workspaceFolder}/src",
-  "php-cs-fixer.executablePath": "${workspaceFolder}/src/vendor/bin/php-cs-fixer",
-  "php-cs-fixer.config": "${workspaceFolder}/src/.php-cs-fixer.dist.php",
-  "php-cs-fixer.formatHtml": true,
-  "[php]": {
-    "editor.defaultFormatter": "junstyle.php-cs-fixer"
-  },
-  "html.validate.styles": false,
-  "html.format.wrapLineLength": 80,
-  "html.format.wrapAttributes": "force",
-  "files.associations": {
-    "*.twig": "html"
-  }
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.organizeImports.biome": "explicit"
+    },
+    "files.insertFinalNewline": true,
+    "intelephense.environment.documentRoot": "${workspaceFolder}/src",
+    "intelephense.files.exclude": [
+        "**/.git/**",
+        "**/.svn/**",
+        "**/.hg/**",
+        "**/CVS/**",
+        "**/.DS_Store/**",
+        "**/node_modules/**",
+        "**/bower_components/**",
+        "**/vendor/**/{Tests,tests}/**",
+        "**/.history/**",
+        "**/vendor/**/vendor/**",
+        "**/backup/**",
+        "**/cache/**"
+    ],
+    "php-cs-fixer.executablePath": "${workspaceFolder}/src/vendor/bin/php-cs-fixer",
+    "php-cs-fixer.config": "${workspaceFolder}/src/.php-cs-fixer.dist.php",
+    "php-cs-fixer.onsave": true,
+    "php-cs-fixer.rules": "@PSR12",
+    "php-cs-fixer.formatHtml": true,
+    "[json]": {
+        "editor.defaultFormatter": "biomejs.biome"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "biomejs.biome"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "biomejs.biome"
+    },
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "biomejs.biome"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "biomejs.biome"
+    },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "biomejs.biome"
+    },
+    "[php]": {
+        "editor.defaultFormatter": "junstyle.php-cs-fixer"
+    },
+    "html.validate.styles": false,
+    "html.format.wrapLineLength": 100,
+    "html.format.wrapAttributes": "force",
+    "files.associations": {
+        "*.twig": "html"
+    }
 }
